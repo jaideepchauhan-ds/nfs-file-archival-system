@@ -1,0 +1,15 @@
+# Copy next to your data as "da.cfg" and edit.
+# Full-line comments only: inline comments are not supported (a regex may contain '#').
+[retention]
+
+# REQUIRED regex on the file NAME (slashes optional): only matching names are ever touched
+sourceFileIncludePattern=/^.*\.csv$/
+
+# optional regex (may be empty): matching names are always protected
+sourceFileExcludePattern=/^keep_/
+
+# REQUIRED integer >= 1: eligible when strictly older than this many days
+retentionDays=60
+
+# TRUE or FALSE (default FALSE): sub-directories inherit this config
+recursive=TRUE
